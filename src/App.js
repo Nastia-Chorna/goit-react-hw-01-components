@@ -6,11 +6,12 @@ import FriendList from './components/FriendList';
 import friends from './friends.json';
 import TransactionHistory from './components/TransactionHistory';
 import transactions from './transactions.json';
+import { Container } from './App.styled';
 
 
 function App() {
     return (
-<div>
+<Container>
         <Profile
   username={users.username}
   tag={users.tag}
@@ -30,7 +31,7 @@ function App() {
            friends={friends}
 />          
         <TransactionHistory items={transactions} /> 
-</div>
+ </Container>
     );
 }
 export default App;

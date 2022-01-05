@@ -1,34 +1,42 @@
 import PropTypes from 'prop-types';
+import {
+  ProfileCard,
+  Image,
+  Name,
+  Tag,
+  Location,
+  Subscribes,
+  SubList,
+  SubName,
+  SubNumber
+
+} from './profile.styled';
 
 function Profile({username, tag, location, avatar, followers, views, likes}) {
   return (
-    <div>
+    <ProfileCard>
   <div>
-    <img
-      src={avatar}
-      alt="User avatar"
-      
-    />
-    <p>{username}</p>
-    <p>{tag}</p>
-    <p>{location}</p>
+    <Image src={avatar} alt={Name} />
+    <Name>{username}</Name>
+    <Tag>{tag}</Tag>
+    <Location>{location}</Location>
   </div>
 
-  <ul>
-    <li>
-      <span>Followers</span>
-      <span>{followers}</span>
-    </li>
-    <li>
-      <span>Views</span>
-      <span>{views}</span>
-    </li>
-    <li>
-      <span>Likes</span>
-      <span>{likes}</span>
-    </li>
-  </ul>
-</div>
+  <Subscribes>
+    <SubList>
+      <SubName>Followers</SubName>
+      <SubNumber>{followers}</SubNumber>
+    </SubList>
+    <SubList>
+      <SubName>Views</SubName>
+      <SubNumber>{views}</SubNumber>
+    </SubList>
+    <SubList>
+      <SubName>Likes</SubName>
+      <SubNumber>{likes}</SubNumber>
+    </SubList>
+  </Subscribes>
+</ProfileCard>
   );
 } 
 Profile.propTypes = {
