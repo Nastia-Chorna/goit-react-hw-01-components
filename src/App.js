@@ -1,8 +1,16 @@
 import Profile from './components/profile';
 import users from './users.json';
+import Stats from './components/stats';
+import data from './data.json';
+import FriendList from './components/FriendList';
+import friends from './friends.json';
+import TransactionHistory from './components/TransactionHistory';
+import transactions from './transactions.json';
 
-export default function App() {
-    return <div >
+
+function App() {
+    return (
+<div>
         <Profile
   username={users.username}
   tag={users.tag}
@@ -12,5 +20,17 @@ export default function App() {
   views={users.stats.views}
   likes={users.stats.likes}
 />
-    </div>
+ 
+        <Stats
+         title="Upload stats" stats={data} 
+        stats={data} 
+
+/>
+        <FriendList
+           friends={friends}
+/>          
+        <TransactionHistory items={transactions} /> 
+</div>
+    );
 }
+export default App;
