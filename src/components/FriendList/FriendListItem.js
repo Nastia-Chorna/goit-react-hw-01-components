@@ -10,9 +10,7 @@ import {
 function FriendListItem({ avatar, name, isOnline }) {
     return (
         <AllFriendsItems>
-            <Status className={isOnline ? 'Online' : 'Offline'}>
-                {isOnline}
-            </Status>
+            <Status isOnline={isOnline}></Status>
             <Pic src={avatar} alt={name} width="48" />
             <FriendName>{name}</FriendName>
         </AllFriendsItems>
@@ -20,8 +18,8 @@ function FriendListItem({ avatar, name, isOnline }) {
 }
 
 FriendListItem.propTypes = {
-    avatar: PropTypes.string,
-    name: PropTypes.string,
-    isOnline: PropTypes.bool,
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
 };
 export default FriendListItem;

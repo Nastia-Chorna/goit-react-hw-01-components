@@ -1,10 +1,10 @@
-import Profile from './components/profile';
+import Profile from './components/Profile/profile';
 import users from './users.json';
-import Stats from './components/stats';
+import Stats from './components/Statistics/stats';
 import data from './data.json';
-import FriendList from './components/FriendList';
+import FriendList from './components/FriendList/FriendList';
 import friends from './friends.json';
-import TransactionHistory from './components/TransactionHistory';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 import transactions from './transactions.json';
 import { Container } from './App.styled';
 

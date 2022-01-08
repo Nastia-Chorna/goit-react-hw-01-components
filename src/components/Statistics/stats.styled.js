@@ -40,6 +40,7 @@ margin: 0 auto;
   line-height: 1.25;
   color: #999999;
 `;
+
 export const StatsNumber = styled.span`
 margin: 0 auto;
   font-weight: 700;

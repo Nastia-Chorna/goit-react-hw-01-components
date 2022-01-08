@@ -10,7 +10,7 @@ import {
   SubName,
   SubNumber
 
-} from './profile.styled';
+} from "./profile.styled";
 
 function Profile({username, tag, location, avatar, followers, views, likes}) {
   return (
