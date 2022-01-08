@@ -8,7 +8,7 @@ width: 800px;
 
 `;
 export const Thead = styled.thead`
-  background-color: #870e7f;
+  background-color: #305791;
  
 `;
 
